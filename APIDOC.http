@@ -1,0 +1,41 @@
+#api call for list
+###
+GET http://127.0.0.1:8000/heros/
+Accept: application/json
+
+#api call for create 
+###
+POST http://127.0.0.1:8000/heros/
+Content-Type: application/json
+
+{
+    "name": "Doctor Strange",
+    "power": "Magic",
+    "universe": "Marvel",
+    "city": "New York",
+    "team": "Avengers"
+}
+
+#api call for retrieve details
+###
+GET http://127.0.0.1:8000/heros/1/
+Accept: application/json
+
+
+#api call for update heros
+###
+PUT http://127.0.0.1:8000/heros/2/
+Content-Type: application/json
+
+{
+    "name": "Superman",
+    "power": "Flight and Super Strength",
+    "universe": "DC",
+    "city": "Metropolis",
+    "team": "Justice League"
+}
+
+#api call for delete heros
+###
+DELETE http://127.0.0.1:8000/heros/2/
+
