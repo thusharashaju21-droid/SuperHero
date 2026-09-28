@@ -39,3 +39,27 @@ Content-Type: application/json
 ###
 DELETE http://127.0.0.1:8000/heros/2/
 
+
+#v2 end point
+###
+GET http://127.0.0.1:8000/v2/heros/
+Accept: application/json
+
+#adding heros
+###
+POST http://127.0.0.1:8000/v2/heros/
+Content-Type: application/json
+
+{
+    "name": "Captain America",
+    "power": "Super Strength",
+    "universe": "Marvel",
+    "city": "New York",
+    "team": "Avengers"
+}
+
+#retrive
+###
+GET http://127.0.0.1:8000/v2/heros/1/
+Accept: application/json
+
