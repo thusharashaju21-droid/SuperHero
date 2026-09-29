@@ -45,3 +45,21 @@ class HeroUpdateDeleteView(APIView):
         serializer_instance = HeroSerializer(qs)
 
         return Response(data=serializer_instance.data)
+
+    def put(self,request,pk=None):
+
+        form_data=request.data
+
+        serializer_instance=HeroSerializer(data=form_data)
+
+        if serializer_instance.is_valid():
+
+            cleaned_data = serializer_instance.validated_data
+
+            SuperHero.objects.filter(**cleaned_data).update()
+
+            return Response(data=serializer_instance.validated_data)
+
+        else:
+
+            return Response(data=serializer_instance.errors)

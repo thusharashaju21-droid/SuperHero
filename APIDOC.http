@@ -63,3 +63,17 @@ Content-Type: application/json
 GET http://127.0.0.1:8000/v2/heros/1/
 Accept: application/json
 
+
+#update
+###
+PUT  http://127.0.0.1:8000/v2/heros/9/
+Content-Type: application/json
+
+{
+    "name": "Iron Man",
+    "power": "Genius Intelligence",
+    "universe": "Marvel",
+    "city": "New York",
+    "team": "Avengers"
+}
+
